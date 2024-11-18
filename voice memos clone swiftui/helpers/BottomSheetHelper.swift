@@ -1,23 +1,14 @@
-//
-//  UIKitHelpers.swift
-//  voice memos clone swiftui
-//
-//  Created by Mushthak Ibrahim on 3/15/22.
-//
-
-import Foundation
 import SwiftUI
 
 struct BottomSheetHelper<Content: View>: UIViewControllerRepresentable {
-    
     @Binding var isPresented: Bool
     
     var content: Content
     var controller = UIViewController()
-    var onClose: ()->()
+    var onClose: () -> ()
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(parent:self)
+        Coordinator(parent: self)
     }
     
     func makeUIViewController(context: Context) -> UIViewController {
@@ -36,7 +27,6 @@ struct BottomSheetHelper<Content: View>: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, UISheetPresentationControllerDelegate {
-        
         var parent: BottomSheetHelper
         
         init(parent: BottomSheetHelper) {
@@ -47,7 +37,4 @@ struct BottomSheetHelper<Content: View>: UIViewControllerRepresentable {
             parent.onClose()
         }
     }
-    
 }
-
-

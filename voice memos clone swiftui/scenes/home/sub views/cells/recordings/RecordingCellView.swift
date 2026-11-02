@@ -1,4 +1,4 @@
-import SwiftUI
+import ScrechKit
 
 struct RecordingCellView: View {
     var recording: RecordingCellVM
@@ -7,7 +7,7 @@ struct RecordingCellView: View {
         VStack {
             HStack {
                 Text(recording.name)
-                    .font(.headline)
+                    .headline()
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
                 
                 Spacer()
@@ -15,13 +15,13 @@ struct RecordingCellView: View {
             
             HStack {
                 Text(recording.recordingTime)
-                    .font(.footnote)
+                    .footnote()
                     .foregroundColor(AppTheme.textSecondary)
                 
                 Spacer()
                 
                 Text(recording.duration)
-                    .font(.footnote)
+                    .footnote()
                     .foregroundColor(AppTheme.textSecondary)
             }
         }

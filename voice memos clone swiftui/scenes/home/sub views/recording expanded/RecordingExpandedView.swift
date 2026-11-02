@@ -1,4 +1,4 @@
-import SwiftUI
+import ScrechKit
 
 struct RecordingExpandedView: View {
     @Environment(\.dismiss) private var dismiss
@@ -9,11 +9,11 @@ struct RecordingExpandedView: View {
         GeometryReader { proxy in
             VStack(spacing: 14) {
                 Text("New Recording")
-                    .font(.title2)
                     .fontWeight(.semibold)
+                    .title2()
                 
                 Text("00:00:00")
-                    .font(.footnote)
+                    .footnote()
                     .foregroundColor(AppTheme.textSecondary)
                 
                 Spacer(minLength: 10)

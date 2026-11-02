@@ -28,9 +28,9 @@ struct RecordingCellView: View {
     }
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview(traits: .sizeThatFitsLayout) {
     let recordingMock = PreviewHelpers.mockRecordingsVMs[0]
     
     RecordingCellView(recording: recordingMock)
-        .previewLayout(.sizeThatFits)
 }

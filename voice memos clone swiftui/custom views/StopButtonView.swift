@@ -23,7 +23,7 @@ struct StopButtonView: View {
     }
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview(traits: .sizeThatFitsLayout) {
     StopButtonView {}
-        .previewLayout(.sizeThatFits)
 }

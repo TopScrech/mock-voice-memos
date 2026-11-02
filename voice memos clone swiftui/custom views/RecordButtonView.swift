@@ -21,7 +21,7 @@ struct RecordButtonView: View {
     }
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview(traits: .sizeThatFitsLayout) {
     RecordButtonView {}
-        .previewLayout(.sizeThatFits)
 }
